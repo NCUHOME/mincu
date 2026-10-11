@@ -1,5 +1,9 @@
 lockfileVersion: '6.0'
 
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
 importers:
 
   .:
@@ -135,9 +139,9 @@ importers:
       '@vitejs/plugin-react':
         specifier: ^2.0.0
         version: 2.0.0(vite@3.0.4)
-      lodash:
-        specifier: ^4.17.21
-        version: 4.17.21
+      es-toolkit:
+        specifier: ^1.52.0
+        version: 1.52.0
       mincu-debug:
         specifier: workspace:2.13.2
         version: link:../../packages/debug
@@ -249,6 +253,9 @@ importers:
       cross-spawn:
         specifier: ^7.0.3
         version: 7.0.3
+      es-toolkit:
+        specifier: ^1.52.0
+        version: 1.52.0
       execa:
         specifier: ^5.1.1
         version: 5.1.1
@@ -258,9 +265,6 @@ importers:
       isomorphic-ws:
         specifier: ^4.0.1
         version: 4.0.1(ws@8.8.0)
-      lodash.debounce:
-        specifier: ^4.0.8
-        version: 4.0.8
       meow:
         specifier: 9.0.0
         version: 9.0.0
@@ -289,9 +293,6 @@ importers:
         specifier: ^8.6.0
         version: 8.8.0
     devDependencies:
-      '@types/lodash.debounce':
-        specifier: ^4.0.7
-        version: 4.0.7
       '@types/node':
         specifier: ^17.0.35
         version: 17.0.35
@@ -301,18 +302,12 @@ importers:
 
   packages/debug-tools:
     dependencies:
-      cross-fetch:
-        specifier: ^3.1.5
-        version: 3.1.5
       debug:
         specifier: ^4.3.4
         version: 4.3.4
       internal-ip:
         specifier: 6.2.0
         version: 6.2.0
-      isomorphic-ws:
-        specifier: ^4.0.1
-        version: 4.0.1(ws@8.8.0)
       link-preview-js:
         specifier: ^2.1.15
         version: 2.1.15
@@ -326,9 +321,6 @@ importers:
       '@formkit/auto-animate':
         specifier: 1.0.0-beta.1
         version: 1.0.0-beta.1(react@18.1.0)
-      '@headlessui/react':
-        specifier: ^1.6.5
-        version: 1.6.5(react-dom@18.1.0)(react@18.1.0)
       '@iconify-json/mdi':
         specifier: ^1.1.24
         version: 1.1.24
@@ -344,9 +336,6 @@ importers:
       '@types/serve-handler':
         specifier: ^6.1.1
         version: 6.1.1
-      '@types/ws':
-        specifier: ^8.5.3
-        version: 8.5.3
       '@unocss/preset-icons':
         specifier: ^0.43.0
         version: 0.43.0
@@ -368,24 +357,9 @@ importers:
       clsx:
         specifier: ^1.1.1
         version: 1.1.1
-      framer-motion:
-        specifier: ^6.3.16
-        version: 6.3.16(react-dom@18.1.0)(react@18.1.0)
-      million:
-        specifier: 1.12.3-beta.3
-        version: 1.12.3-beta.3
       mincu-lib:
         specifier: workspace:2.13.2
         version: link:../lib
-      nanoid:
-        specifier: ^4.0.0
-        version: 4.0.0
-      prism-react-renderer:
-        specifier: ^1.3.5
-        version: 1.3.5(react@18.1.0)
-      qrcode.react:
-        specifier: ^3.0.2
-        version: 3.0.2(react@18.1.0)
       react:
         specifier: 18.1.0
         version: 18.1.0
@@ -401,9 +375,6 @@ importers:
       redaxios:
         specifier: ^0.5.0
         version: 0.5.0
-      shiki:
-        specifier: ^0.10.1
-        version: 0.10.1
       simplebar:
         specifier: ^5.3.8
         version: 5.3.8
@@ -475,9 +446,9 @@ importers:
 
   packages/hooks:
     dependencies:
-      lodash:
-        specifier: ^4.17.21
-        version: 4.17.21
+      es-toolkit:
+        specifier: ^1.52.0
+        version: 1.52.0
       mincu-core:
         specifier: workspace:2.13.2
         version: link:../core
@@ -2321,19 +2292,6 @@ packages:
       '@babel/helper-validator-identifier': 7.18.6
       to-fast-properties: 2.0.0
 
-  /@emotion/is-prop-valid@0.8.8:
-    resolution: {integrity: sha512-u5WtneEAr5IDG2Wv65yhunPSMLIpuKsbuOktRojfrEiEvRyC85LgPMZI63cr7NUqT8ZIGdSVg8ZKGxIug4lXcA==}
-    requiresBuild: true
-    dependencies:
-      '@emotion/memoize': 0.7.4
-    dev: true
-    optional: true
-
-  /@emotion/memoize@0.7.4:
-    resolution: {integrity: sha512-Ja/Vfqe3HpuzRsG1oBtWTHk2PGZ7GR+2Vz5iYGelAw8dx32K0y7PjVuxK6z1nMpZOqAFsRUPCkK1YjJ56qJlgw==}
-    dev: true
-    optional: true
-
   /@esbuild/linux-loong64@0.14.53:
     resolution: {integrity: sha512-W2dAL6Bnyn4xa/QRSU3ilIK4EzD5wgYXKXJiS1HDF5vU3675qc2bvFyLwbUcdmssDveyndy7FbitrCoiV/eMLg==}
     engines: {node: '>=12'}
@@ -2415,17 +2373,6 @@ packages:
 
   /@gar/promisify@1.1.3:
     resolution: {integrity: sha512-k2Ty1JcVojjJFwrg/ThKi2ujJ7XNLYaFGNB/bWT9wGR+oSMJHMa5w+CUq6p/pVrKeNNgA7pCqEcjSnHVoqJQFw==}
-    dev: true
-
-  /@headlessui/react@1.6.5(react-dom@18.1.0)(react@18.1.0):
-    resolution: {integrity: sha512-3VkKteDxlxf3fE0KbfO9t60KC1lM7YNpZggLpwzVNg1J/zwL+h+4N7MBlFDVpInZI3rKlZGpNx0PWsG/9c2vQg==}
-    engines: {node: '>=10'}
-    peerDependencies:
-      react: ^16 || ^17 || ^18
-      react-dom: ^16 || ^17 || ^18
-    dependencies:
-      react: 18.1.0
-      react-dom: 18.1.0(react@18.1.0)
     dev: true
 
   /@headlessui/react@1.6.5(react-dom@18.2.0)(react@18.2.0):
@@ -3353,16 +3300,6 @@ packages:
 
   /@types/json-schema@7.0.11:
     resolution: {integrity: sha512-wOuvG1SN4Us4rez+tylwwwCV1psiNVOkJeM3AUWUNWg/jDQY2+HE/444y5gc+jBmRqASOm2Oeh5c1axHobwRKQ==}
-    dev: true
-
-  /@types/lodash.debounce@4.0.7:
-    resolution: {integrity: sha512-X1T4wMZ+gT000M2/91SYj0d/7JfeNZ9PeeOldSNoE/lunLeQXKvkmIumI29IaKMotU/ln/McOIvgzZcQ/3TrSA==}
-    dependencies:
-      '@types/lodash': 4.14.182
-    dev: true
-
-  /@types/lodash@4.14.182:
-    resolution: {integrity: sha512-/THyiqyQAP9AfARo4pF+aCGcyiQ94tX/Is2I7HofNRqoYLgN1PBoOWu2/zTA5zMxzP5EFutMtWtGAFRKUe961Q==}
     dev: true
 
   /@types/minimatch@3.0.5:
@@ -5161,6 +5098,9 @@ packages:
       stackframe: 1.2.1
     dev: true
 
+  /es-toolkit@1.52.0:
+    resolution: {integrity: sha512-XTNEJQh1tY1ZJVcf6ayP/2n4ZPyaHlW2FWs7xvw5ddPuhUVjLD3olQVQS7kf58JbAB48iL0uL/jerTrjtV3lDA==}
+
   /esbuild-android-64@0.14.39:
     resolution: {integrity: sha512-EJOu04p9WgZk0UoKTqLId9VnIsotmI/Z98EXrKURGb3LPNunkeffqQIkjS2cAvidh+OK5uVrXaIP229zK6GvhQ==}
     engines: {node: '>=12'}
@@ -5984,29 +5924,6 @@ packages:
     resolution: {integrity: sha512-MhLuK+2gUcnZe8ZHlaaINnQLl0xRIGRfcGk2yl8xoQAfHrSsL3rYu6FCmBdkdbhc9EPlwyGHewaRsvwRMJtAlA==}
     dev: true
 
-  /framer-motion@6.3.16(react-dom@18.1.0)(react@18.1.0):
-    resolution: {integrity: sha512-1kuXvOVss/Rzi+XHuYq6RPjwnZGkfnfvtBpCpZm+kYhLGA6ICHwfAJtG1ohz1ruSAFVMz3RSpanTf6TOPG979A==}
-    peerDependencies:
-      react: '>=16.8 || ^17.0.0 || ^18.0.0'
-      react-dom: '>=16.8 || ^17.0.0 || ^18.0.0'
-    dependencies:
-      framesync: 6.0.1
-      hey-listen: 1.0.8
-      popmotion: 11.0.3
-      react: 18.1.0
-      react-dom: 18.1.0(react@18.1.0)
-      style-value-types: 5.0.0
-      tslib: 2.4.0
-    optionalDependencies:
-      '@emotion/is-prop-valid': 0.8.8
-    dev: true
-
-  /framesync@6.0.1:
-    resolution: {integrity: sha512-fUY88kXvGiIItgNC7wcTOl0SNRCVXMKSWW2Yzfmn7EKNc+MpCzcz9DhdHcdjbrtN3c6R4H5dTY2jiCpPdysEjA==}
-    dependencies:
-      tslib: 2.4.0
-    dev: true
-
   /from@0.1.7:
     resolution: {integrity: sha512-twe20eF1OxVxp/ML/kq2p1uc6KvFK/+vs8WjEbeKmV2He22MKm7YF2ANIt+EOqhJ5L3K/SuuPhk0hWQDjOM23g==}
     dev: false
@@ -6369,10 +6286,6 @@ packages:
     dependencies:
       function-bind: 1.1.1
 
-  /hey-listen@1.0.8:
-    resolution: {integrity: sha512-COpmrF2NOg4TBWUJ5UVyaCU2A88wEMkUPK4hNqyCkqHbxT92BbvfjoSozkAIIm6XhicGlJHhFdullInrdhwU8Q==}
-    dev: true
-
   /history@5.3.0:
     resolution: {integrity: sha512-ZqaKwjjrAYUYfLG+htGaIIZ4nioX2L70ZUMIFysS3xvBsSG4x/n1V6TXV3N8ZYNuFGlDirFg32T7B6WOUPDYcQ==}
     dependencies:
@@ -6474,6 +6387,7 @@ packages:
   /iconv-lite@0.6.3:
     resolution: {integrity: sha512-4fCk79wshMdzMp2rH06qWrJE4iolqLhCUH+OiuIgU++RB0+94NlDL81atO7GX55uUKueo0txHNtvEyI6D7WdMw==}
     engines: {node: '>=0.10.0'}
+    requiresBuild: true
     dependencies:
       safer-buffer: 2.1.2
     dev: true
@@ -6867,10 +6781,6 @@ packages:
     hasBin: true
     dev: true
 
-  /jsonc-parser@3.0.0:
-    resolution: {integrity: sha512-fQzRfAbIBnR0IQvftw9FJveWiHp72Fg20giDrHz6TdfB12UH/uue0D3hm57UB5KgAVuniLMCaS8P1IMj9NR7cA==}
-    dev: true
-
   /jsonfile@6.1.0:
     resolution: {integrity: sha512-5dgndWOriYSm5cnYaJNhalLNDKOqFwyDB/rr1E9ZsGciGvKPs8R2xYGCacuf3z6K1YKDz182fd+fY3cn3pMqXQ==}
     dependencies:
@@ -7012,6 +6922,7 @@ packages:
 
   /lodash.debounce@4.0.8:
     resolution: {integrity: sha512-FT1yDzDYEoYWhnSGnpE/4Kj1fLZkDFyqRb7fNt6FdYOSxlUWAtp42Eh6Wb0rGIv/m9Bgo7x4GhQbm5Ys4SG5ow==}
+    dev: true
 
   /lodash.isequal@4.5.0:
     resolution: {integrity: sha512-pDo3lu8Jhfjqls6GkMgpahsF9kCyayhgykjyLMNFTKWrpVdAQtYyB4muAMWozBB4ig/dtWAmsMxLEI8wuz+DYQ==}
@@ -7035,6 +6946,7 @@ packages:
 
   /lodash@4.17.21:
     resolution: {integrity: sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==}
+    dev: true
 
   /log-symbols@5.1.0:
     resolution: {integrity: sha512-l0x2DvrW294C9uDCoQe1VSU4gf529FkSZ6leBl4TiqZH/e+0R7hSfHQBNut2mNygDgHwvYHfFLn6Oxb3VWj2rA==}
@@ -7252,10 +7164,6 @@ packages:
     dependencies:
       braces: 3.0.2
       picomatch: 2.3.1
-    dev: true
-
-  /million@1.12.3-beta.3:
-    resolution: {integrity: sha512-AGl4G4g5hkn70R2CjcA6cJl9gqh4rM3S/fmquNkBUJ5sHSRcKvGQ6lQ1o3bPgiPOY1zmlt9AgXYlSLNrPGpi2A==}
     dev: true
 
   /mime-db@1.33.0:
@@ -7483,12 +7391,6 @@ packages:
     resolution: {integrity: sha512-MqBkQh/OHTS2egovRtLk45wEyNXwF+cokD+1YPf9u5VfJiRdAiRwB2froX5Co9Rh20xs4siNPm8naNotSD6RBw==}
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
     hasBin: true
-
-  /nanoid@4.0.0:
-    resolution: {integrity: sha512-IgBP8piMxe/gf73RTQx7hmnhwz0aaEXYakvqZyE302IXW3HyVNhdNGC+O2MwMAVhLEnvXlvKtGbtJf6wvHihCg==}
-    engines: {node: ^14 || ^16 || >=18}
-    hasBin: true
-    dev: true
 
   /natural-compare@1.4.0:
     resolution: {integrity: sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==}
@@ -8189,15 +8091,6 @@ packages:
       find-up: 4.1.0
     dev: true
 
-  /popmotion@11.0.3:
-    resolution: {integrity: sha512-Y55FLdj3UxkR7Vl3s7Qr4e9m0onSnP8W7d/xQLsoJM40vs6UKHFdygs6SWryasTZYqugMjm3BepCF4CWXDiHgA==}
-    dependencies:
-      framesync: 6.0.1
-      hey-listen: 1.0.8
-      style-value-types: 5.0.0
-      tslib: 2.4.0
-    dev: true
-
   /postcss-import@14.1.0(postcss@8.4.16):
     resolution: {integrity: sha512-flwI+Vgm4SElObFVPpTIT7SU7R3qk2L7PyduMcokiaVKuWv9d/U+Gm/QAd8NDLuykTWTkcrjOeD2Pp1rMeBTGw==}
     engines: {node: '>=10.0.0'}
@@ -8319,14 +8212,6 @@ packages:
       prettier: 2.7.1
     dev: true
 
-  /prism-react-renderer@1.3.5(react@18.1.0):
-    resolution: {integrity: sha512-IJ+MSwBWKG+SM3b2SUfdrhC+gu01QkV2KmRQgREThBfSQRoufqRfxfHUxpG1WcaFjP+kojcFyO9Qqtpgt3qLCg==}
-    peerDependencies:
-      react: '>=0.14.9'
-    dependencies:
-      react: 18.1.0
-    dev: true
-
   /proc-log@3.0.0:
     resolution: {integrity: sha512-++Vn7NS4Xf9NacaU9Xq3URUuqZETPsf8L4j5/ckhaRYsfPeRyzGw+iDjFhV/Jr3uNmTvvddEJFWh5R1gRgUH8A==}
     engines: {node: ^14.17.0 || ^16.13.0 || >=18.0.0}
@@ -8425,14 +8310,6 @@ packages:
   /q@1.5.1:
     resolution: {integrity: sha512-kV/CThkXo6xyFEZUugw/+pIOywXcDbFYgSct5cT3gqlbkBE1SJdwy6UQoZvodiWF/ckQLZyDE/Bu1M6gVu5lVw==}
     engines: {node: '>=0.6.0', teleport: '>=0.2.0'}
-    dev: true
-
-  /qrcode.react@3.0.2(react@18.1.0):
-    resolution: {integrity: sha512-8F3SGxSkNb3fMIHdlseqjFjLbsPrF3WvF/1MOboSUUHytT537W8f/FtbdA3XFIHDrc+TrRBjTI/QLmwhAIGWWw==}
-    peerDependencies:
-      react: ^16.8.0 || ^17.0.0 || ^18.0.0
-    dependencies:
-      react: 18.1.0
     dev: true
 
   /qrcode.react@3.1.0(react@18.2.0):
@@ -9009,14 +8886,6 @@ packages:
     resolution: {integrity: sha512-Vpfqwm4EnqGdlsBFNmHhxhElJYrdfcxPThu+ryKS5J8L/fhAwLazFZtq+S+TWZ9ANj2piSQLGj6NQg+lKPmxrw==}
     dev: true
 
-  /shiki@0.10.1:
-    resolution: {integrity: sha512-VsY7QJVzU51j5o1+DguUd+6vmCmZ5v/6gYu4vyYAhzjuNQU6P/vmSy4uQaOhvje031qQMiW0d2BwgMH52vqMng==}
-    dependencies:
-      jsonc-parser: 3.0.0
-      vscode-oniguruma: 1.6.2
-      vscode-textmate: 5.2.0
-    dev: true
-
   /signal-exit@3.0.7:
     resolution: {integrity: sha512-wnD2ZE+l+SPC/uoS0vXeE9L1+0wuaMqKlfz9AMUo38JsyLSBWSFcHR1Rri62LZc12vLr1gb3jl7iwQhgwpAbGQ==}
 
@@ -9334,13 +9203,6 @@ packages:
       duplexer: 0.1.2
       minimist: 1.2.6
       through: 2.3.8
-    dev: true
-
-  /style-value-types@5.0.0:
-    resolution: {integrity: sha512-08yq36Ikn4kx4YU6RD7jWEv27v4V+PUsOGa4n/as8Et3CuODMJQ00ENeAVXAeydX4Z2j1XHZF1K2sX4mGl18fA==}
-    dependencies:
-      hey-listen: 1.0.8
-      tslib: 2.4.0
     dev: true
 
   /style-vendorizer@2.2.3:
@@ -9926,14 +9788,6 @@ packages:
       rollup: 2.77.2
     optionalDependencies:
       fsevents: 2.3.2
-    dev: true
-
-  /vscode-oniguruma@1.6.2:
-    resolution: {integrity: sha512-KH8+KKov5eS/9WhofZR8M8dMHWN2gTxjMsG4jd04YhpbPR91fUj7rYQ2/XjeHCJWbg7X++ApRIU9NUwM2vTvLA==}
-    dev: true
-
-  /vscode-textmate@5.2.0:
-    resolution: {integrity: sha512-Uw5ooOQxRASHgu6C7GVvUxisKXfSgW4oFlO+aa+PAkgmH89O3CXxEEzNRNtHSqtXFTl0nAC1uYj0GMSH27uwtQ==}
     dev: true
 
   /vue-tsc@0.39.5(typescript@4.7.4):

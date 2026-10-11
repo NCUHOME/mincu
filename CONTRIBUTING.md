@@ -4,6 +4,8 @@ mincu 的项目结构为 monorepo，使用 pnpm workspaces + lerna lite 管理�
 
 ## 项目初始化
 
+运行环境要求 Node.js 18 或更高版本。
+
 ```cmd
 $ git clone https://github.com/ncuhome/mincu # or clone your fork
 $ cd mincu
