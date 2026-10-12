@@ -5,10 +5,6 @@ import { toast } from './toast'
 import { orientation } from './orientation'
 
 export class UIModule {
-  static Instance() {
-    return new UIModule()
-  }
-
   toast = toast
 
   backPress = backPress
@@ -41,4 +37,4 @@ export class UIModule {
   }
 }
 
-export default UIModule.Instance()
+export default new UIModule()

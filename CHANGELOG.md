@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 未发布
+
+### API 清理
+
+- 删除 `NetWorkModule.fetch` 的废弃声明和空实现 `getStoredToken()`；请求功能请使用自行创建的 Axios 实例，并通过 `networkModule.useAxiosInterceptors()` 注册拦截器。
+- 删除 `DebugModule`、`DataModule`、`EventModule`、`NetWorkModule` 和 `UIModule` 的 `static Instance()`，默认导出直接实例化，仍保持模块级共享实例。
+- 兼容性影响：移除的公开成员不再出现在类型声明中；需要创建独立实例时，改用 `new DataModule()`、`new EventModule()`、`new NetWorkModule()` 或 `new UIModule()`。`mincu` 扁平 API 的其余拼接行为保持原样。
+
 ## [2.13.2](https://github.com/ncuhome/mincu/compare/v2.13.1...v2.13.2) (2023-04-23)
 
 **Note:** Version bump only for package mincu-monorepo
