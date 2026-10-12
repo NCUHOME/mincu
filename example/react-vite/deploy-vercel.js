@@ -1,6 +1,6 @@
 // mincu-react-vite
 const { execSync } = require('child_process');
-const cloneDeep = require('lodash/cloneDeep')
+const { cloneDeep } = require('es-toolkit')
 
 const fs = require('fs');
 const path = require('path');

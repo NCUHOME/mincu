@@ -13,11 +13,14 @@
     "dist"
   ],
   "dependencies": {
-    "lodash": "^4.17.21",
+    "es-toolkit": "^1.52.0",
     "mincu-core": "workspace:2.13.2",
     "mincu-data": "workspace:2.13.2"
   },
   "peerDependencies": {
     "react": ">=17"
+  },
+  "engines": {
+    "node": ">=18"
   }
 }

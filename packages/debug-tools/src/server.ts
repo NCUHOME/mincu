@@ -2,7 +2,6 @@ import { createServer, IncomingMessage, ServerResponse } from 'http'
 import path from 'path'
 import serveHandler from 'serve-handler'
 import { preview } from './api/preview'
-import { makeApi } from './api/common'
 import internalIp from 'internal-ip'
 
 const IPV4 = internalIp.v4.sync()
@@ -36,9 +35,7 @@ export const startDevTool = () => {
     if (url.includes('/api/preview')) {
       return preview(req, res)
     } else if (url.includes('/api/ip')) {
-      return makeApi((req, res) => {
-        res.end(IPV4)
-      })(req, res)
+      return res.end(IPV4)
     } else {
       return serveHandler(req, res, {
         public: PUBLIC_PATH,

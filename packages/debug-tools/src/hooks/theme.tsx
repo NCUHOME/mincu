@@ -7,11 +7,6 @@ export const useThemeDark = () => {
   return isDark
 }
 
-export const useTheme = () => {
-  const isDark = useThemeDark()
-  return isDark ? 'dark' : 'light'
-}
-
 export const useThemeWatcher = () => {
   const isDark = useThemeDark()
   useEffect(() => {

@@ -105,13 +105,6 @@ export interface EdgeInsets {
 
 export type ColorSchemeName = 'light' | 'dark' | null | undefined
 
-export interface EdgeInsets {
-  top: number
-  right: number
-  bottom: number
-  left: number
-}
-
 interface IEntireProfileResponse {
   base_info: Base_info
   is_teacher: boolean

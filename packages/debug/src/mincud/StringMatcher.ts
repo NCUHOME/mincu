@@ -1,4 +1,4 @@
-import debounce from 'lodash.debounce'
+import { debounce } from 'es-toolkit/compat'
 
 /**
  * 用以匹配来自类似于 Readable 的持续输出的字符串流。

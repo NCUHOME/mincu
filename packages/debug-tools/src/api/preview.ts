@@ -1,7 +1,6 @@
-import { makeApi } from './common'
+import { IncomingMessage, ServerResponse } from 'http'
 import { getLinkPreview, getPreviewFromContent } from 'link-preview-js'
 import { debug } from 'debug'
-import { fetch } from 'cross-fetch'
 
 const log = debug('preview')
 
@@ -20,7 +19,7 @@ const getPreviewContent = async (url: string) => {
   return getLinkPreview(url)
 }
 
-export const preview = makeApi(async (req, res) => {
+export const preview = async (req: IncomingMessage, res: ServerResponse) => {
   if (!req.url) return
   const params = new URLSearchParams(req.url.split('?')[1])
   const target = params.get('target')
@@ -44,4 +43,4 @@ export const preview = makeApi(async (req, res) => {
     log('error: ', 'target is not a string')
     res.end('No target')
   }
-})
+}
