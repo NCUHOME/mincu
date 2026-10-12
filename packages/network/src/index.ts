@@ -19,16 +19,6 @@ export class NetWorkModule {
 
   public token: string = ''
 
-  /**
-   * @deprecated
-   * networkModule.useAxiosInterceptors is for your need
-   */
-  public fetch: any
-
-  static Instance() {
-    return new NetWorkModule()
-  }
-
   constructor() {
     this.token = dataModule.appData.user.token || ''
   }
@@ -61,11 +51,6 @@ export class NetWorkModule {
   private setToken = (token: string) => {
     this.token = token
   }
-
-  /**
-   * @deprecated should not use
-   */
-  public getStoredToken() {}
 
   private getAuthorization(token: string) {
     return `passport ${token}`
@@ -150,4 +135,4 @@ export class NetWorkModule {
   }
 }
 
-export default NetWorkModule.Instance()
+export default new NetWorkModule()

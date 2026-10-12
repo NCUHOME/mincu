@@ -2,10 +2,6 @@ import mincuCore from 'mincu-core'
 import { ShareConfig } from 'mincu-core'
 
 export class EventModule {
-  static Instance() {
-    return new EventModule()
-  }
-
   /**
    * 通过系统默认浏览器打开 Web 页面
    *
@@ -38,4 +34,4 @@ export class EventModule {
   }
 }
 
-export default EventModule.Instance()
+export default new EventModule()

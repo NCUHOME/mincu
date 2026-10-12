@@ -4,10 +4,6 @@ import { defaultUserData } from 'mincu-lib'
 import { MincuStorage } from './storage'
 
 export class DataModule {
-  static Instance() {
-    return new DataModule()
-  }
-
   storage = new MincuStorage()
 
   get isDark() {
@@ -52,4 +48,4 @@ export class DataModule {
   }
 }
 
-export default DataModule.Instance()
+export default new DataModule()

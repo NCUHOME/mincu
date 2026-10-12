@@ -3,10 +3,6 @@ import { Client } from './mincud/client'
 import { LOG_LEVELS } from 'mincu-lib/debug'
 
 class DebugModule {
-  static Instance() {
-    return new DebugModule()
-  }
-
   client: Client
 
   constructor() {
@@ -67,4 +63,4 @@ class DebugModule {
   }
 }
 
-export default DebugModule.Instance()
+export default new DebugModule()
